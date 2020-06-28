@@ -40,8 +40,9 @@ class StudentAdapter(val mContext:Context, val resId:Int, val mList:ArrayList<St
 
 //    뽑은 데이터를 텍스트뷰에 반영
     nameTxt.text = studentData.name
-    ageTxt.text = studentData.birthYear.toString()
 
+//    생년을 가지고 현재의 나이를 구해서 출력
+    ageTxt.text = "${2020 - studentData.birthYear + 1}세"
     return row
     }
 }
