@@ -45,6 +45,7 @@ class StudentAdapter(val mContext:Context, val resId:Int, val mList:ArrayList<St
 //    생년을 가지고 현재의 나이를 구해서 출력
     ageTxt.text = "${2020 - studentData.birthYear + 1}세"
 
+//    거주지 정보를 표기
     addressTxt.text = studentData.address
     return row
     }
