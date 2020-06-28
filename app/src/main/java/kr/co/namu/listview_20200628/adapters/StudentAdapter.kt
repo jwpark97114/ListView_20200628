@@ -32,6 +32,7 @@ class StudentAdapter(val mContext:Context, val resId:Int, val mList:ArrayList<St
 //    row -> student_list_item.xml안에서 어댑터kt파일로 뷰를 가져오자
     val nameTxt = row.findViewById<TextView>(R.id.nameTxt)
     val ageTxt = row.findViewById<TextView>(R.id.ageTxt)
+    val addressTxt = row.findViewById<TextView>(R.id.addressTxt)
 
 
 //    실제 상황에 맞는(= position(17번째 줄)에 들어있는 값에 맞는) 데이터를 출력
@@ -43,6 +44,8 @@ class StudentAdapter(val mContext:Context, val resId:Int, val mList:ArrayList<St
 
 //    생년을 가지고 현재의 나이를 구해서 출력
     ageTxt.text = "${2020 - studentData.birthYear + 1}세"
+
+    addressTxt.text = studentData.address
     return row
     }
 }
